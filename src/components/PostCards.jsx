@@ -1,13 +1,15 @@
 import React from 'react'
 import "../components/PostCards.css";
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 
 const PostCards = () => {
   return (
+    
     <div id="postcard">
-        <div id="postimage">
+        <Link to="/post/192" id="postimage">
           <img src="https://caphe.sfo2.cdn.digitaloceanspaces.com/assets/images/yolk-free-ios-ui-kit-design-system-for-sketch-thumb.jpg" alt="post" id="postimageinner" />
-        </div>
+        </Link>
         <div id="postcontrols">
           <img src="https://img.freepik.com/free-photo/portrait-happy-young-woman-looking-camera_23-2147892777.jpg?w=2000" alt="userimage" id="userimage"/>
           <div id="control">
@@ -16,6 +18,7 @@ const PostCards = () => {
           </div>
         </div>
     </div>
+    
   )
 }
 

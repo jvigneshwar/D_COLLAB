@@ -1,0 +1,17 @@
+#input{
+    display: none;
+}
+
+#userb{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#useri{
+    width: 100%;
+}

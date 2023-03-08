@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PostCards from "../components/PostCards";
 import SuggestionCard from "../components/SuggestionCard";
 import "../styles/Home.css";
 
 const Home = () => {
+
+    useEffect(()=>{
+        fetch("http://localhost:1337/api/home",
+        {
+            method: "GET",
+            headers:{
+                "x-access-token" : localStorage.getItem('token'),
+            }
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+            console.log(data)
+            if(data.status === "failed"){
+                window.location.href = "/login";
+            }
+        })
+    },[])
+
     return(
         <div id="home">
             <div className="posts">
